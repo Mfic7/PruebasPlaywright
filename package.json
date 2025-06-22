@@ -1,0 +1,36 @@
+{
+  "name": "qa-automation-framework",
+  "version": "1.0.0",
+  "description": "Framework de automatización de QA usando Playwright y patrón Screenplay con principios SOLID y POO",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:bdd": "cucumber-js",
+    "test:bdd:netflix": "cucumber-js --tags \"@netflix\"",
+    "test:bdd:gmail": "cucumber-js --tags \"@gmail\"",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "automatizacion",
+    "testing",
+    "screenplay",
+    "bdd",
+    "cucumber",
+    "qa",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "Equipo de Automatización QA",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/register": "^7.27.1",
+    "@cucumber/cucumber": "^10.0.1",
+    "@types/node": "^20.10.0"
+  }
+}

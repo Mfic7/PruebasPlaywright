@@ -1,0 +1,50 @@
+============================================
+INSTRUCCIONES DE EJECUCIÓN - QA AUTOMATIZADA
+============================================
+
+Este proyecto automatiza escenarios de inicio de sesión y navegación en Netflix (web) y Gmail (móvil). Las credenciales de prueba ya están incluidas en el código para facilitar la ejecución.
+
+--------------------------------------------
+REQUISITOS PREVIOS
+--------------------------------------------
+- Node.js 16+ instalado.
+
+--------------------------------------------
+INSTALACIÓN Y CONFIGURACIÓN
+--------------------------------------------
+1. Abre una terminal en la carpeta del proyecto.
+2. Instala todas las dependencias:
+   npm install
+3. Instala los navegadores que usa Playwright:
+   npm run test:install
+
+--------------------------------------------
+EJECUCIÓN DE TESTS
+--------------------------------------------
+Ejecuta los tests uno por uno con los siguientes comandos.
+
+# 1. Test de Netflix (Web)
+   npm run test:netflix
+
+# 2. Test de Gmail (Móvil)
+   npm run test:gmail
+
+# 3. Test BDD (Login en GitHub)
+   npm run test:bdd
+
+--------------------------------------------
+VISUALIZAR REPORTES
+--------------------------------------------
+Después de cada ejecución, puedes ver un reporte detallado con los resultados, capturas de pantalla y videos de los tests.
+
+# Para ver el reporte:
+   npm run test:report
+
+--------------------------------------------
+NOTAS IMPORTANTES
+--------------------------------------------
+- **AUTENTICACIÓN DE 2 FACTORES (2FA)**: Para que el login automático funcione, es recomendable que desactives temporalmente la autenticación de dos factores en tus cuentas. De lo contrario, la automatización se detendrá en la pantalla de verificación.
+
+- **EJECUCIÓN VISIBLE**: Por defecto, los tests se ejecutan en modo "headed" (visible). Para una ejecución más rápida en segundo plano, puedes editar los scripts en `package.json` y quitar el flag `--headed`.
+
+¡Éxito en tu evaluación! 
